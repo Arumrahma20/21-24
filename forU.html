@@ -14,21 +14,22 @@
             background: black;
             text-align: center;
             color: white;
-            font-family: 'Segoe UI', sans-serif;
         }
         h1 {
             margin-top: 2%;
-            font-size: 6vw; /* Gunakan ukuran fleksibel */
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 40px;
         }
         .gift-button {
             background: linear-gradient(to right, #ff416c, #ff4b2b);
             color: white;
-            font-size: 18px;
-            padding: 12px 25px;
+            font-size: 20px;
+            padding: 15px 30px;
             border: none;
             border-radius: 30px;
             cursor: pointer;
             transition: 0.3s;
+            position: relative;
             margin-top: 20px;
         }
         .gift-button:hover {
@@ -36,26 +37,23 @@
         }
         #gift-box {
             display: none;
-            background: rgba(0, 0, 0, 0.9);
+            background: rgba(0, 0, 0, 0.8);
             padding: 20px;
             border-radius: 10px;
             text-align: center;
             position: fixed;
-            width: 90%;
-            max-width: 400px;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
         }
-        #gift-box p {
-            font-size: 14px;
-            text-align: left;
-            padding: 10px;
+        #gift-box img {
+            max-width: 300px;
+            border-radius: 10px;
         }
         #gift-box button {
             margin-top: 10px;
             padding: 10px;
-            font-size: 14px;
+            font-size: 16px;
             border: none;
             background: crimson;
             color: white;
@@ -63,49 +61,28 @@
             border-radius: 5px;
         }
         .content {
-            height: auto;
+            height: 30vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 20px;
         }
         .photo-section {
             text-align: center;
-            padding: 20px;
+            padding: 50px 0;
         }
         .photo-section img {
-            width: 90%;
-            max-width: 350px;
+            width: 80%;
+            max-width: 500px;
             border-radius: 10px;
-            margin-top: 15px;
+            margin-top: 20px;
         }
         footer {
             background: #222;
             color: white;
             text-align: center;
-            padding: 15px;
-            font-size: 14px;
-        }
-
-        /* Media Query untuk HP */
-        @media screen and (max-width: 768px) {
-            h1 {
-                font-size: 7vw;
-            }
-            .gift-button {
-                font-size: 16px;
-                padding: 10px 20px;
-            }
-            #gift-box {
-                width: 95%;
-            }
-            #gift-box p {
-                font-size: 13px;
-            }
-            .photo-section img {
-                width: 95%;
-            }
+            padding: 20px;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -113,31 +90,36 @@
     <div class="content">
         <h1>Selamat Ulang Tahun, My Fav Person 🎂✨</h1>
     </div>
-
+    
     <canvas id="fireworks"></canvas>
-
+    
     <div class="photo-section">
         <button class="gift-button" onclick="showGift()">Buka Hadiah 🎁</button>
+        <p></p>
         <h2>Look at U so Cute</h2>
         <img src="uuu1.JPG" alt="Foto Kenangan">
         <img src="uuu2.JPG" alt="Foto Kenangan2">
         <img src="uuu3.JPG" alt="Foto Kenangan3">
     </div>
-
+    
     <div id="gift-box">
         <h2>🎁 Spesial Untukmu 🎁</h2>
         <p>Selamat Ulang Tahun, My Fav Person 🎂✨
-            Semoga bertambahnya usia menjadikanmu pribadi yang lebih dewasa dan lebih bijak dalam mengambil keputusan.
-            Aku harap segala impianmu terwujud, rezekimu lancar, dan kesehatanmu selalu terjaga. 
-            Selamat menikmati hari spesialmu. 😊🎉✨
-        </p>
+            Semoga bertambahnya usia menjadikanmu pribadi yang lebih dewasa, lebih bijak dalam mengambil keputusan, dan lebih bertanggung jawab atas apa yang kau pilih dalam hidup. Aku berharap segala yang kau impikan bisa terwujud, rezekimu lancar, kesehatanmu selalu terjaga, dan langkahmu semakin dimudahkan.
+            
+            Mungkin kini kita hanyalah bagian dari masa lalu satu sama lain, tapi itu tidak menghapus semua kenangan baik yang pernah kita bagi. Ada tawa, ada harapan, ada perjuangan, dan tentu ada luka yang mengajarkan banyak hal. Aku belajar banyak darimu, dan aku harap kau juga belajar banyak dari perjalanan kita.
+            
+            Aku tidak akan berkata banyak, hanya ingin kau tahu bahwa setiap keputusan yang diambil selalu ada konsekuensinya. Aku harap, di usiamu yang baru ini, kau bisa lebih menghargai orang-orang yang tulus di sekitarmu sebelum mereka hanya tinggal kenangan.
+            
+            Selamat merayakan hari spesialmu. Semoga kebahagiaan selalu menyertaimu, bahkan jika bukan aku lagi yang jadi alasannya. 😊🎉✨</p>
+        <p></p>
         <button onclick="closeGift()">Close</button>
     </div>
-
+    
     <footer>
         <p>Created with ❤️ by Arumra</p>
     </footer>
-
+    
     <script>
         function showGift() {
             document.getElementById('gift-box').style.display = 'block';
